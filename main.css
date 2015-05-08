@@ -1,1 +1,17 @@
-/* Style Sheet */
+body {
+	font-family: comic-sans-serif;
+	color: white;
+	background-color: black;
+}
+
+#board {
+	height: 600px;
+	width: 600px;
+	background-color: white;
+}
+
+.box {
+	height: 98px;
+	width: 98px;
+	background-color: black;
+}

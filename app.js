@@ -2,16 +2,18 @@
 
 // Execute this code only AFTER the document is ready
 // Hint: use jQuery's `$(document).ready`
-
-  function Game() {
+$(function() {
+  function Game(player1, player2) 
     //Create a new instance of player 1
-    //this.player1 = ...
+    this.player1 = player1
 
     //Do the same for a player 2
-    //this.player2 = ...
+    this.player2 = player2
     
     //Create the board
-    //this.board = ...
+    this.board = function() {
+      
+    }
   }
 
   // Remember: prototypes are shared functions between all game instances
@@ -36,8 +38,9 @@
     //this.$cells = ...
 
     //Store any other properties that board may have below, such as a reset option
-  };
+  });
 
   // Start the game!
   var game = new Game();
   game.init();
+});
