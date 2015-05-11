@@ -84,7 +84,7 @@ var game = "";
   });
 
   $(".box").on("click", function(event){
-    $(this).text()
+    $(this).text("X" || "O")
   })
 
 
