@@ -3,16 +3,16 @@
 // Execute this code only AFTER the document is ready
 // Hint: use jQuery's `$(document).ready`
 $(document).ready(function() {
+var game = "";
 
   function Game(playerX, playerO) {
     //Create a new instance of player 1
-    this.playerX = new Player(playerX);
+    this.player1 = playerX;
     console.log(playerX)
 
     //Do the same for a player 2
-    this.playerO = new Player(playerO);
+    this.player2 = playerO;
     console.log(playerO)
-    console.log(ex)
     
     //Create the board
     this.board = function() {
@@ -25,6 +25,7 @@ $(document).ready(function() {
   // Remember: prototypes are shared functions between all game instances
   Game.prototype.nextPlayer = function() {
     //Switch players
+    this.Player() ? X : O;
   };
 
   // `Game.prototype.init` kicks off a new game with a board and two players
@@ -43,6 +44,30 @@ $(document).ready(function() {
   function Board() {
     //Tracks the cells of the board instance
     this.$cells = $(".box")
+    this.checkWin = function () {
+      var symbol = turns % 2 === 0 ? "X" : "ohs";
+      var boxes = document.querySelectorAll(".box");
+      var winningCombos = [
+          [0, 1, 2],
+          [3, 4, 5],
+          [6, 7, 8],
+          [0, 3, 6],
+          [1, 4, 7],
+          [2, 5, 8],
+          [0, 4, 8],
+          [2, 4, 6]
+        ];
+      var combo, win;
+      for (var i = 0; i < winningCombos.length; i++) {
+        combo = winningCombos[i];
+        win = boxes[combo[0]].classList.contains(symbol) &&
+              boxes[combo[1]].classList.contains(symbol) &&
+              boxes[combo[2]].classList.contains(symbol);
+        if (win) {
+          return true;
+        }
+      }
+    }
 
     //Store any other properties that board may have below, such as a reset option
   };
@@ -52,14 +77,14 @@ $(document).ready(function() {
   $("#newGame").on("click", function(event){
     // Start the game!
     console.log("Click works");
-    var game = new Game("ex", "oh");
+    var game = new Game("X", "O");
     game.board();
     //game.init();
 
   });
 
   $(".box").on("click", function(event){
-    console.log(event.target)
+    $(this).text()
   })
 
 
