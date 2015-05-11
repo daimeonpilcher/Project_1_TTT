@@ -6,24 +6,25 @@ $(document).ready(function() {
 
   function Game(playerX, playerO) {
     //Create a new instance of player 1
-    this.playerX = new Player(x);
+    this.playerX = new Player(playerX);
     console.log(playerX)
 
     //Do the same for a player 2
-    this.playerO = new Player(o);
+    this.playerO = new Player(playerO);
     console.log(playerO)
+    console.log(ex)
     
     //Create the board
     this.board = function() {
-      $("#board").html("<img src='chalkboard-assets/Board.png' />");
-      $(".box").each.html("$nbsp;");
+      $(".box").each(function(i, text){
+        $(this).html("&nbsp")
+      });
     }
   };
 
   // Remember: prototypes are shared functions between all game instances
   Game.prototype.nextPlayer = function() {
     //Switch players
-    if($)
   };
 
   // `Game.prototype.init` kicks off a new game with a board and two players
@@ -50,12 +51,16 @@ $(document).ready(function() {
 
   $("#newGame").on("click", function(event){
     // Start the game!
-    console.log("Click works")
-    var game = new Game(x, o);
-    //game.board
+    console.log("Click works");
+    var game = new Game("ex", "oh");
+    game.board();
     //game.init();
 
   });
+
+  $(".box").on("click", function(event){
+    console.log(event.target)
+  })
 
 
 });
