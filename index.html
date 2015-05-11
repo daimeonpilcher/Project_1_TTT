@@ -5,26 +5,36 @@
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
   <!-- Require jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
   <!-- HTML Body -->
-  <h1>Tic Tac Toe</h1>
-  <img src="http://www.cs.utah.edu/~gk/atwork/img/hevequip2.gif" alt="under construction"></img>
+  <h1>Tic-Tac-Toe</h1>
+  <div id="score">
+    <h1>Score</h1>
+    <div id="playerX" class="player"><h2>Player "X": <span class="xscore">-</span></h2></div>
+    <div id="playerO" class="player"><h2>Player "O": <span class="oscore">-</span></h2></div>
+    <div id="newGame" class="button"><p><p>New Game </div>
+    <div class="reset"> <h1>Reset</h1> </div>
+  </div>
   <!-- Tic Tac Toe Board here -->
-  <div id="board">
+  <div id="board"><img src='chalkboard-assets/Board.png' />
     <div class="box">&nbsp;</div>
     <div class="box">&nbsp;</div>
     <div class="box">&nbsp;</div>
     <div class="box">&nbsp;</div>
     <div class="box">&nbsp;</div>
-    <div class="box">&nbsp;</div>
-    <div class="box">&nbsp;</div>
+    <div class="box">X</div>
+    <div class="box">O</div>
     <div class="box">&nbsp;</div>
     <div class="box">&nbsp;</div>
   </div>
   <!-- Reset button -->
+  
 </body>
 </html>

@@ -1,25 +1,75 @@
-body {
-	font-family: comic-sans-serif;
-	color: white;
-	background-color: black;
-	position: relative;
+@font-face {
+    font-family: 'EraserDust';
+    src: url('chalkboard-assets/EraserDust.ttf');
 }
 
+@font-face {
+	font-family: 'Crayon';
+	src: url('chalkboard-assets/DK Crayon Crumble.ttf');
+}
+
+body {
+	font-family: Crayon;
+	color: white;
+	text-align: center;
+	background: url(chalkboard.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+body h1 {
+	font-size: 80px;
+	opacity: .5;
+}
+
+#score  {
+	font-size: 60px;
+	width: 300px;
+	height: 1px;
+	opacity: .5;
+	/*border: 1px solid white;*/
+}
+
+.player {
+	width: 200px;
+	display: inline-block;
+	/*border: 1px solid white;*/
+}
+
+
 #board {
-	height: 600px;
-	width: 602px;
-	background-color: white;
+    max-height: 600px;
+    max-width: 610px;
+    min-width: 50%;
+    min-height: 50%;
 	top: 30px;
   	left: 25%;
   	position: relative;
-  	/*border: 2px solid yellow;*/
+  	font-family: EraserDust;
+/*  border: 1px solid yellow;*/
+}
+
+
+#board img {
+	height: 600px;
+    width: 610px; 
+	position: absolute;
+
 }
 
 .box {
 	height: 198px;
 	width: 198px;
-	background-color: black;
-	/*border: 2px solid green;*/
+/*	background-color: black;*/	
+	/*border: 1px solid green;*/
 	display: inline-block;
 	margin-bottom: 3px;
+	font-family: EraserDust;
+	font-size: 175px;
+	line-height: 198px;
+	vertical-align: center;
+	opacity: .5;
+
 }
